@@ -220,15 +220,15 @@ python3 chatbot.py
 
 ## 👨‍💻 About the Developer
 
-**[Your Name]**
+Sujith Reddy
 - Master's in Computer Science
 - Specialized in Prompt Engineering and AI Integration
 - Passionate about building practical AI solutions
 
 ### Connect
-- LinkedIn: [Your LinkedIn URL]
-- GitHub: [Your GitHub Profile]
-- Email: [Your Email]
+- LinkedIn: https://www.linkedin.com/in/sujith-reddy-bommareddy-8b75572b8/
+- GitHub: https://github.com/sujith0303?tab=repositories
+- Email: bsujithreddy@gmail.com
 
 ---
 
@@ -238,6 +238,6 @@ This project is available for portfolio and educational purposes.
 
 ---
 
-**Built with 💙 by [Your Name]**
+**Built with 💙 by Sujith Reddy
 
 *Last Updated: November 2025*
