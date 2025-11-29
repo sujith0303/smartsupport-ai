@@ -404,11 +404,3 @@ SmartSupport AI successfully demonstrates that effective AI solutions require mo
 The project proves that even with free, local LLMs, professional-grade customer service automation is achievable through careful prompt engineering and quality management.
 
 ---
-
-**Project Duration:** 3 days  
-**Lines of Code:** ~400  
-**Quality Achievement:** 93%  
-**Scenarios Covered:** 10  
-**Perfect Scores:** 6/10  
-
-**Status:** ✅ Portfolio Ready
