@@ -125,13 +125,13 @@ def generate_all_responses():
     
     results = {}
     for scenario_type, question in test_cases.items():
-        print(f"📋 Scenario: {scenarios[scenario_type]['name']}")
-        print(f"👤 Customer: {question}")
-        print(f"⏳ Generating response...\n")
+        print(f"Scenario: {scenarios[scenario_type]['name']}")
+        print(f"Customer: {question}")
+        print(f"Generating response...\n")
         
         response = get_chatbot_response(scenario_type, question)
         
-        print(f"🤖 Bot Response:")
+        print(f"Bot Response:")
         print(f"   {response}")
         print("\n" + "-"*60 + "\n")
         
@@ -144,7 +144,7 @@ def generate_all_responses():
     with open('chatbot_test_results.json', 'w') as f:
         json.dump(results, f, indent=2)
     
-    print("✅ All responses generated and saved\n")
+    print("All responses generated and saved\n")
     return results
 
 def evaluate_response_manual(scenario_type, customer_message, bot_response):
@@ -238,13 +238,13 @@ def evaluate_all_responses(results):
     with open('chatbot_evaluations.json', 'w') as f:
         json.dump(evaluations, f, indent=2)
     
-    print("✅ All evaluations complete\n")
+    print("All evaluations complete\n")
     return evaluations
 
 def generate_summary_report(evaluations):
     """Generate summary report"""
     print("="*60)
-    print("📊 QUALITY EVALUATION SUMMARY")
+    print("QUALITY EVALUATION SUMMARY")
     print("="*60 + "\n")
     
     scores = [data['evaluation']['overall_score'] for data in evaluations.values()]
@@ -258,18 +258,18 @@ def generate_summary_report(evaluations):
                          for k, v in evaluations.items() 
                          if v['evaluation']['overall_score'] < 7]
     
-    print(f"📈 OVERALL STATISTICS:")
+    print(f" OVERALL STATISTICS:")
     print(f"   Average Quality Score: {avg_score:.1f}/10 ({(avg_score/10)*100:.0f}%)")
     print(f"   Total Scenarios: {len(scores)}\n")
     
-    print(f"✅ HIGH PERFORMING (8+): {len(high_performing)} scenarios")
+    print(f" HIGH PERFORMING (8+): {len(high_performing)} scenarios")
     if high_performing:
         for name, score in sorted(high_performing, key=lambda x: x[1], reverse=True):
             print(f"   • {name}: {score:.1f}/10")
     else:
         print("   None yet")
     
-    print(f"\n⚠️  NEEDS IMPROVEMENT (<7): {len(needs_improvement)} scenarios")
+    print(f"\n  NEEDS IMPROVEMENT (<7): {len(needs_improvement)} scenarios")
     if needs_improvement:
         for name, score in sorted(needs_improvement, key=lambda x: x[1]):
             print(f"   • {name}: {score:.1f}/10")
@@ -285,7 +285,7 @@ def generate_summary_report(evaluations):
     }
 
 if __name__ == "__main__":
-    print("\n🚀 SMARTSUPPORT AI - CHATBOT QUALITY ANALYSIS")
+    print("\n SMARTSUPPORT AI - CHATBOT QUALITY ANALYSIS")
     print("="*60 + "\n")
     
     # Generate responses with full display
@@ -297,9 +297,9 @@ if __name__ == "__main__":
     # Generate summary
     summary = generate_summary_report(evaluations)
     
-    print("\n✅ ANALYSIS COMPLETE!")
+    print("\n ANALYSIS COMPLETE!")
     print("\nGenerated files:")
     print("  • chatbot_test_results.json")
     print("  • chatbot_evaluations.json")
-    print(f"\n📊 Final Average Score: {summary['average_score']:.1f}/10 ({(summary['average_score']/10)*100:.0f}%)")
+    print(f"\n Final Average Score: {summary['average_score']:.1f}/10 ({(summary['average_score']/10)*100:.0f}%)")
     print("\n" + "="*60 + "\n")
