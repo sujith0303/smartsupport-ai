@@ -238,6 +238,6 @@ This project is available for portfolio and educational purposes.
 
 ---
 
-**Built with 💙 by Sujith Reddy
+**Built by Sujith Reddy
 
 *Last Updated: November 2025*
